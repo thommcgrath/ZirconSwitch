@@ -4,3 +4,4 @@ Builds - *
 *.debug
 *.tar.gz
 TempSaveFile*
+.DS_Store
