@@ -158,15 +158,15 @@ Inherits ArtisanKit.Control
 		        ShadowColor = &c00000080
 		      #else
 		        FontColor = &cFFFFFF
-		        ShadowColor = ZirconKit.BlendColors(CellColor,&c000000,0.50)
+		        ShadowColor = ArtisanKit.BlendColors(CellColor,&c000000,0.50)
 		      #endif
 		    Else
 		      #if TargetMacOS
 		        FontColor = &c00000035
 		        ShadowColor = &cFFFFFF80
 		      #else
-		        FontColor = ZirconKit.BlendColors(CellColor,&c000000,0.75)
-		        ShadowColor = ZirconKit.BlendColors(CellColor,&cFFFFFF,0.50)
+		        FontColor = ArtisanKit.BlendColors(CellColor,&c000000,0.75)
+		        ShadowColor = ArtisanKit.BlendColors(CellColor,&cFFFFFF,0.50)
 		      #endif
 		    End If
 		    
@@ -206,15 +206,15 @@ Inherits ArtisanKit.Control
 		        ShadowColor = &c00000080
 		      #else
 		        FontColor = &cFFFFFF
-		        ShadowColor = ZirconKit.BlendColors(CellColor,&c000000,0.50)
+		        ShadowColor = ArtisanKit.BlendColors(CellColor,&c000000,0.50)
 		      #endif
 		    Else
 		      #if TargetMacOS
 		        FontColor = &c00000035
 		        ShadowColor = &cFFFFFF80
 		      #else
-		        FontColor = ZirconKit.BlendColors(CellColor,&c000000,0.75)
-		        ShadowColor = ZirconKit.BlendColors(CellColor,&cFFFFFF,0.50)
+		        FontColor = ArtisanKit.BlendColors(CellColor,&c000000,0.75)
+		        ShadowColor = ArtisanKit.BlendColors(CellColor,&cFFFFFF,0.50)
 		      #endif
 		    End If
 		    
