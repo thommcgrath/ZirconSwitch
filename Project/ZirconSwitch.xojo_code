@@ -536,19 +536,19 @@ Inherits ArtisanKit.Control
 		Private Sub SetupFont(G As Graphics)
 		  Select Case Self.ControlSize
 		  Case SizeNormal
-		    #if TargetWin32
+		    #if TargetWin32 or TargetLinux
 		      G.TextSize = 10
 		    #else
 		      G.TextSize = 13.5
 		    #endif
 		  Case SizeSmall
-		    #if TargetWin32
+		    #if TargetWin32 Or TargetLinux
 		      G.TextSize = 8.5
 		    #else
 		      G.TextSize = 10.8
 		    #endif
 		  Case SizeMini
-		    #if TargetWin32
+		    #if TargetWin32 Or TargetLinux
 		      G.TextSize = 6
 		    #else
 		      G.TextSize = 8.1
