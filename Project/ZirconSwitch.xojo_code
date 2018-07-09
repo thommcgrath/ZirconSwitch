@@ -256,13 +256,13 @@ Inherits ArtisanKit.Control
 		  
 		  // Finish it
 		  If Self.HasFocus Then
-		    Self.BeginFocusRing(G)
+		    ArtisanKit.BeginFocusRing()
 		  End If
 		  Dim GraphicsFactor As Double = G.ScalingFactor
 		  Dim AdjustmentFactor As Double = ScalingFactor / GraphicsFactor
 		  G.DrawPicture(ControlGraphic,Self.ActualControlLeft(G.Width / AdjustmentFactor),0,ControlWidth * AdjustmentFactor,ControlHeight * AdjustmentFactor,0,0,ControlGraphic.Width,ControlGraphic.Height)
 		  If Self.HasFocus Then
-		    Self.EndFocusRing(G)
+		    ArtisanKit.EndFocusRing()
 		  End If
 		End Sub
 	#tag EndEvent
@@ -923,6 +923,11 @@ Inherits ArtisanKit.Control
 
 	#tag ViewBehavior
 		#tag ViewProperty
+			Name="NeedsFullKeyboardAccessForFocus"
+			Group="Behavior"
+			Type="Boolean"
+		#tag EndViewProperty
+		#tag ViewProperty
 			Name="AcceptFocus"
 			Visible=true
 			Group="Behavior"
@@ -1012,6 +1017,7 @@ Inherits ArtisanKit.Control
 			Group="Behavior"
 			InitialValue="True"
 			Type="Boolean"
+			EditorType="Boolean"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="HasFocus"
