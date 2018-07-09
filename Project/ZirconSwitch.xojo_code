@@ -706,6 +706,11 @@ Inherits ArtisanKit.Control
 			Set
 			  Self.mLeftSideCaption = Value
 			  Self.Invalidate
+			  
+			  Dim Animated As Boolean = Self.Animated
+			  Self.Animated = False
+			  Self.State = Self.State
+			  Self.Animated = Animated
 			End Set
 		#tag EndSetter
 		LeftSideCaption As String
@@ -800,8 +805,13 @@ Inherits ArtisanKit.Control
 		#tag EndGetter
 		#tag Setter
 			Set
-			  Self.mRightSideCaption= Value
+			  Self.mRightSideCaption = Value
 			  Self.Invalidate
+			  
+			  Dim Animated As Boolean = Self.Animated
+			  Self.Animated = False
+			  Self.State = Self.State
+			  Self.Animated = Animated
 			End Set
 		#tag EndSetter
 		RightSideCaption As String
