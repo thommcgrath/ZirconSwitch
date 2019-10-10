@@ -52,6 +52,7 @@ Begin Window Window1
       LockLeft        =   False
       LockRight       =   False
       LockTop         =   False
+      NeedsFullKeyboardAccessForFocus=   False
       RightSideCaption=   "OFF"
       RightSideColor  =   &cE5E5E500
       Scope           =   0
@@ -174,6 +175,7 @@ Begin Window Window1
       TextSize        =   0.0
       TextUnit        =   0
       Top             =   46
+      Transparent     =   True
       Underline       =   False
       UseFocusRing    =   True
       Visible         =   True
@@ -216,6 +218,7 @@ Begin Window Window1
       TextSize        =   0.0
       TextUnit        =   0
       Top             =   46
+      Transparent     =   True
       Underline       =   False
       UseFocusRing    =   True
       Visible         =   True
@@ -245,6 +248,7 @@ Begin Window Window1
       TabStop         =   True
       TickStyle       =   "2"
       Top             =   112
+      Transparent     =   True
       Value           =   -1
       Visible         =   True
       Width           =   231
@@ -346,6 +350,7 @@ Begin Window Window1
       TextSize        =   0.0
       TextUnit        =   0
       Top             =   149
+      Transparent     =   True
       Underline       =   False
       Visible         =   True
       Width           =   151
@@ -377,6 +382,7 @@ Begin Window Window1
       TextSize        =   0.0
       TextUnit        =   0
       Top             =   80
+      Transparent     =   True
       Underline       =   False
       Visible         =   True
       Width           =   116
@@ -408,6 +414,7 @@ Begin Window Window1
       TextSize        =   0.0
       TextUnit        =   0
       Top             =   80
+      Transparent     =   True
       Underline       =   False
       Visible         =   True
       Width           =   116
@@ -439,6 +446,7 @@ Begin Window Window1
       TextSize        =   0.0
       TextUnit        =   0
       Top             =   245
+      Transparent     =   True
       Underline       =   False
       Value           =   True
       Visible         =   True
@@ -471,6 +479,7 @@ Begin Window Window1
       TextSize        =   0.0
       TextUnit        =   0
       Top             =   277
+      Transparent     =   True
       Underline       =   False
       Value           =   True
       Visible         =   True
@@ -503,6 +512,7 @@ Begin Window Window1
       TextSize        =   0.0
       TextUnit        =   0
       Top             =   181
+      Transparent     =   True
       Underline       =   False
       Visible         =   True
       Width           =   151
@@ -569,6 +579,7 @@ Begin Window Window1
       TextSize        =   0.0
       TextUnit        =   0
       Top             =   213
+      Transparent     =   True
       Underline       =   False
       Visible         =   True
       Width           =   151
@@ -765,7 +776,6 @@ End
 			"7 - Global Floating Window"
 			"8 - Sheet Window"
 			"9 - Metal Window"
-			"10 - Drawer Window"
 			"11 - Modeless Dialog"
 		#tag EndEnumValues
 	#tag EndViewProperty
