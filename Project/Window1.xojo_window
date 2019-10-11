@@ -626,11 +626,11 @@ End
 		Sub Action()
 		  Select Case Me.State
 		  Case ZirconSwitch.StateOn
-		    PopupMenu3.ListIndex = 1
+		    PopupMenu3.SelectedRowIndex = 1
 		  Case ZirconSwitch.StateOff
-		    PopupMenu3.ListIndex = 0
+		    PopupMenu3.SelectedRowIndex = 0
 		  Case ZirconSwitch.StateIndeterminate
-		    PopupMenu3.ListIndex = 2
+		    PopupMenu3.SelectedRowIndex = 2
 		  Else
 		    Break
 		  End Select
@@ -639,15 +639,15 @@ End
 #tag EndEvents
 #tag Events TextField1
 	#tag Event
-		Sub TextChange()
-		  SwitchPreview.LeftSideCaption = Me.Text
+		Sub TextChanged()
+		  SwitchPreview.LeftSideCaption = Me.Value
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events TextField2
 	#tag Event
-		Sub TextChange()
-		  SwitchPreview.RightSideCaption = Me.Text
+		Sub TextChanged()
+		  SwitchPreview.RightSideCaption = Me.Value
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -660,18 +660,18 @@ End
 #tag EndEvents
 #tag Events PopupMenu1
 	#tag Event
-		Sub Change()
-		  If Me.ListIndex > -1 Then
-		    SwitchPreview.Align = Me.ListIndex
+		Sub SelectionChanged()
+		  If Me.SelectedRowIndex > -1 Then
+		    SwitchPreview.Align = Me.SelectedRowIndex
 		  End If
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events PushButton1
 	#tag Event
-		Sub Action()
-		  Dim C As Color = SwitchPreview.LeftSideColor
-		  If SelectColor(C, "Choose the left side color") Then
+		Sub Pressed()
+		  Var C As Color = SwitchPreview.LeftSideColor
+		  If Color.SelectedFromDialog(C, "Choose the left side color") Then
 		    SwitchPreview.LeftSideColor = C
 		  End If
 		End Sub
@@ -679,9 +679,9 @@ End
 #tag EndEvents
 #tag Events PushButton2
 	#tag Event
-		Sub Action()
-		  Dim C As Color = SwitchPreview.RightSideColor
-		  If SelectColor(C, "Choose the right side color") Then
+		Sub Pressed()
+		  Var C As Color = SwitchPreview.RightSideColor
+		  If Color.SelectedFromDialog(C, "Choose the right side color") Then
 		    SwitchPreview.RightSideColor = C
 		  End If
 		End Sub
@@ -689,31 +689,31 @@ End
 #tag EndEvents
 #tag Events CheckBox2
 	#tag Event
-		Sub Action()
+		Sub ValueChanged()
 		  SwitchPreview.Animated = Me.Value
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events CheckBox3
 	#tag Event
-		Sub Action()
+		Sub ValueChanged()
 		  SwitchPreview.Enabled = Me.Value
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events PopupMenu2
 	#tag Event
-		Sub Change()
-		  If Me.ListIndex > -1 Then
-		    SwitchPreview.ControlSize = Me.ListIndex
+		Sub SelectionChanged()
+		  If Me.SelectedRowIndex > -1 Then
+		    SwitchPreview.ControlSize = Me.SelectedRowIndex
 		  End If
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events PopupMenu3
 	#tag Event
-		Sub Change()
-		  Select Case Me.ListIndex
+		Sub SelectionChanged()
+		  Select Case Me.SelectedRowIndex
 		  Case 0
 		    SwitchPreview.State = ZirconSwitch.StateOff
 		  Case 1
