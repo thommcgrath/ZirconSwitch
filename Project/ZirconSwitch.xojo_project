@@ -1,6 +1,7 @@
 Type=Desktop
-RBProjectVersion=2018.03
-MinIDEVersion=20070100
+RBProjectVersion=2019.02
+MinIDEVersion=20190200
+OrigIDEVersion=20190200
 Class=App;App.xojo_code;&h0000000038F54425;&h0000000000000000;false
 Window=Window1;Window1.xojo_window;&h000000006E4D37FF;&h0000000000000000;false
 MenuBar=MainMenuBar;MainMenuBar.xojo_menu;&h0000000001E2310C;&h0000000000000000;false
@@ -10,7 +11,6 @@ Class=ZirconSwitch;ZirconSwitch.xojo_code;&h000000000A9A0DC2;&h0000000000000000;
 Folder=Project;ArtisanKit/Project;&h000000006DE40FFF;&h0000000043A14FFF;false
 Module=ArtisanKit;ArtisanKit/Project/ArtisanKit.xojo_code;&h000000001AB510A5;&h000000006DE40FFF;false
 Class=Control;ArtisanKit/Project/ArtisanKit/Control.xojo_code;&h000000003C9F42BA;&h000000001AB510A5;false
-Class=RetinaPicture;ArtisanKit/Project/ArtisanKit/RetinaPicture.xojo_code;&h000000007F3BA15B;&h000000001AB510A5;false
 Class=ScrollEvent;ArtisanKit/Project/ArtisanKit/ScrollEvent.xojo_code;&h000000003E3DAA92;&h000000001AB510A5;false
 DefaultWindow=Window1
 AppMenuBar=MainMenuBar
