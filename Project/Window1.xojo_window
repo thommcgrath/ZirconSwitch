@@ -17,9 +17,9 @@ Begin Window Window1
    MaxWidth        =   32000
    MenuBar         =   31600908
    MenuBarVisible  =   True
-   MinHeight       =   64
+   MinHeight       =   400
    MinimizeButton  =   True
-   MinWidth        =   64
+   MinWidth        =   600
    Placement       =   2
    Resizeable      =   False
    Title           =   "Switch Demo"
@@ -32,8 +32,6 @@ Begin Window Window1
       Animated        =   True
       AutoDeactivate  =   True
       Backdrop        =   0
-      ControlHeight   =   0
-      ControlSize     =   0
       ControlWidth    =   -1
       DoubleBuffer    =   False
       Enabled         =   True
@@ -56,10 +54,10 @@ Begin Window Window1
       Scope           =   0
       ScrollSpeed     =   20
       State           =   1
-      TabIndex        =   0
+      TabIndex        =   16
       TabPanelIndex   =   0
       TabStop         =   True
-      Top             =   309
+      Top             =   277
       Transparent     =   False
       UseFocusRing    =   False
       Value           =   True
@@ -86,7 +84,7 @@ Begin Window Window1
       Multiline       =   False
       Scope           =   0
       Selectable      =   False
-      TabIndex        =   9
+      TabIndex        =   0
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "Left Side (True)"
@@ -121,7 +119,7 @@ Begin Window Window1
       Multiline       =   False
       Scope           =   0
       Selectable      =   False
-      TabIndex        =   10
+      TabIndex        =   1
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "Right Side (False)"
@@ -164,7 +162,7 @@ Begin Window Window1
       Password        =   False
       ReadOnly        =   False
       Scope           =   0
-      TabIndex        =   0
+      TabIndex        =   2
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "ON"
@@ -207,7 +205,7 @@ Begin Window Window1
       Password        =   False
       ReadOnly        =   False
       Scope           =   0
-      TabIndex        =   1
+      TabIndex        =   3
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "OFF"
@@ -241,7 +239,7 @@ Begin Window Window1
       Minimum         =   -1
       PageStep        =   75
       Scope           =   0
-      TabIndex        =   4
+      TabIndex        =   7
       TabPanelIndex   =   0
       TabStop         =   True
       TickStyle       =   2
@@ -271,7 +269,7 @@ Begin Window Window1
       Multiline       =   False
       Scope           =   0
       Selectable      =   False
-      TabIndex        =   11
+      TabIndex        =   6
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "Width"
@@ -306,7 +304,7 @@ Begin Window Window1
       Multiline       =   False
       Scope           =   0
       Selectable      =   False
-      TabIndex        =   12
+      TabIndex        =   8
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "Align"
@@ -341,7 +339,7 @@ Begin Window Window1
       LockRight       =   False
       LockTop         =   True
       Scope           =   0
-      TabIndex        =   5
+      TabIndex        =   9
       TabPanelIndex   =   0
       TabStop         =   True
       TextFont        =   "System"
@@ -373,7 +371,7 @@ Begin Window Window1
       LockRight       =   False
       LockTop         =   True
       Scope           =   0
-      TabIndex        =   2
+      TabIndex        =   4
       TabPanelIndex   =   0
       TabStop         =   True
       TextFont        =   "System"
@@ -405,7 +403,7 @@ Begin Window Window1
       LockRight       =   False
       LockTop         =   True
       Scope           =   0
-      TabIndex        =   3
+      TabIndex        =   5
       TabPanelIndex   =   0
       TabStop         =   True
       TextFont        =   "System"
@@ -437,15 +435,16 @@ Begin Window Window1
       LockTop         =   True
       Scope           =   0
       State           =   1
-      TabIndex        =   7
+      TabIndex        =   14
       TabPanelIndex   =   0
       TabStop         =   True
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   245
+      Top             =   213
       Transparent     =   True
       Underline       =   False
+      Value           =   True
       Visible         =   True
       Width           =   151
    End
@@ -469,84 +468,18 @@ Begin Window Window1
       LockTop         =   True
       Scope           =   0
       State           =   1
-      TabIndex        =   13
-      TabPanelIndex   =   0
-      TabStop         =   True
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
-      Top             =   277
-      Transparent     =   True
-      Underline       =   False
-      Visible         =   True
-      Width           =   151
-   End
-   Begin PopupMenu PopupMenu2
-      AutoDeactivate  =   True
-      Bold            =   False
-      DataField       =   ""
-      DataSource      =   ""
-      Enabled         =   True
-      Height          =   20
-      HelpTag         =   ""
-      Index           =   -2147483648
-      InitialParent   =   ""
-      InitialValue    =   "Normal\nSmall\nMini"
-      Italic          =   False
-      Left            =   247
-      ListIndex       =   0
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      Scope           =   0
-      TabIndex        =   14
-      TabPanelIndex   =   0
-      TabStop         =   True
-      TextFont        =   "System"
-      TextSize        =   0.0
-      TextUnit        =   0
-      Top             =   181
-      Transparent     =   True
-      Underline       =   False
-      Visible         =   True
-      Width           =   151
-   End
-   Begin Label Label5
-      AutoDeactivate  =   True
-      Bold            =   False
-      DataField       =   ""
-      DataSource      =   ""
-      Enabled         =   True
-      Height          =   20
-      HelpTag         =   ""
-      Index           =   -2147483648
-      InitialParent   =   ""
-      Italic          =   False
-      Left            =   122
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      Multiline       =   False
-      Scope           =   0
-      Selectable      =   False
       TabIndex        =   15
       TabPanelIndex   =   0
       TabStop         =   True
-      Text            =   "Size"
-      TextAlign       =   2
-      TextColor       =   &c00000000
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   181
-      Transparent     =   False
+      Top             =   245
+      Transparent     =   True
       Underline       =   False
+      Value           =   True
       Visible         =   True
-      Width           =   113
+      Width           =   151
    End
    Begin PopupMenu PopupMenu3
       AutoDeactivate  =   True
@@ -568,13 +501,13 @@ Begin Window Window1
       LockRight       =   False
       LockTop         =   True
       Scope           =   0
-      TabIndex        =   16
+      TabIndex        =   13
       TabPanelIndex   =   0
       TabStop         =   True
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   213
+      Top             =   181
       Transparent     =   True
       Underline       =   False
       Visible         =   True
@@ -600,7 +533,7 @@ Begin Window Window1
       Multiline       =   False
       Scope           =   0
       Selectable      =   False
-      TabIndex        =   17
+      TabIndex        =   12
       TabPanelIndex   =   0
       TabStop         =   True
       Text            =   "State"
@@ -609,7 +542,7 @@ Begin Window Window1
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   213
+      Top             =   181
       Transparent     =   False
       Underline       =   False
       Visible         =   True
@@ -639,15 +572,23 @@ End
 #tag EndEvents
 #tag Events TextField1
 	#tag Event
-		Sub TextChanged()
-		  SwitchPreview.LeftSideCaption = Me.Value
+		Sub TextChange()
+		  #if XojoVersion >= 2020.02
+		    SwitchPreview.LeftSideCaption = Me.Text
+		  #else
+		    SwitchPreview.LeftSideCaption = Me.Value
+		  #endif
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events TextField2
 	#tag Event
-		Sub TextChanged()
-		  SwitchPreview.RightSideCaption = Me.Value
+		Sub TextChange()
+		  #if XojoVersion >= 2020.02
+		    SwitchPreview.RightSideCaption = Me.Text
+		  #else
+		    SwitchPreview.RightSideCaption = Me.Value
+		  #endif
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -660,7 +601,7 @@ End
 #tag EndEvents
 #tag Events PopupMenu1
 	#tag Event
-		Sub SelectionChanged()
+		Sub Change()
 		  If Me.SelectedRowIndex > -1 Then
 		    SwitchPreview.Align = Me.SelectedRowIndex
 		  End If
@@ -669,7 +610,7 @@ End
 #tag EndEvents
 #tag Events PushButton1
 	#tag Event
-		Sub Pressed()
+		Sub Action()
 		  Var C As Color = SwitchPreview.LeftSideColor
 		  If Color.SelectedFromDialog(C, "Choose the left side color") Then
 		    SwitchPreview.LeftSideColor = C
@@ -679,7 +620,7 @@ End
 #tag EndEvents
 #tag Events PushButton2
 	#tag Event
-		Sub Pressed()
+		Sub Action()
 		  Var C As Color = SwitchPreview.RightSideColor
 		  If Color.SelectedFromDialog(C, "Choose the right side color") Then
 		    SwitchPreview.RightSideColor = C
@@ -689,30 +630,21 @@ End
 #tag EndEvents
 #tag Events CheckBox2
 	#tag Event
-		Sub ValueChanged()
+		Sub Action()
 		  SwitchPreview.Animated = Me.Value
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events CheckBox3
 	#tag Event
-		Sub ValueChanged()
+		Sub Action()
 		  SwitchPreview.Enabled = Me.Value
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events PopupMenu2
-	#tag Event
-		Sub SelectionChanged()
-		  If Me.SelectedRowIndex > -1 Then
-		    SwitchPreview.ControlSize = Me.SelectedRowIndex
-		  End If
 		End Sub
 	#tag EndEvent
 #tag EndEvents
 #tag Events PopupMenu3
 	#tag Event
-		Sub SelectionChanged()
+		Sub Change()
 		  Select Case Me.SelectedRowIndex
 		  Case 0
 		    SwitchPreview.State = ZirconSwitch.StateOff
