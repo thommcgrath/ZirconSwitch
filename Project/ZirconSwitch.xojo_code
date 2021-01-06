@@ -240,6 +240,31 @@ Inherits ArtisanKit.Control
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
+		Private Function ActualControlWidth() As Integer
+		  Var ControlWidth As Integer
+		  If Self.ControlWidth = Self.ControlWidthAuto Then
+		    Var Metrics As New Picture(2, 2, 32)
+		    Self.SetupFont(Metrics.Graphics)
+		    
+		    Var LeftSideWidth As Double = Metrics.Graphics.TextWidth(Self.LeftSideCaption)
+		    Var RightSideWidth As Double = Metrics.Graphics.TextWidth(Self.RightSideCaption)
+		    Var LargestSideWidth As Double = Max(LeftSideWidth, RightSideWidth)
+		    #if XojoVersion >= 2020.02
+		      LargestSideWidth = Ceiling(LargestSideWidth)
+		    #else
+		      LargestSideWidth = Ceil(LargestSideWidth)
+		    #endif
+		    
+		    ControlWidth = LargestSideWidth + (Self.Height * 1.5)
+		  Else
+		    ControlWidth = Self.ControlWidth
+		  End If
+		  
+		  Return Min(Max(ControlWidth, Self.Height * 2), Self.Width)
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h21
 		Private Sub SetupFont(G As Graphics)
 		  If Self.Height >= 20 Then
 		    #if TargetWin32 or TargetLinux
@@ -269,11 +294,10 @@ Inherits ArtisanKit.Control
 
 	#tag Method, Flags = &h21
 		Private Function ThumbRect() As Rect
-		  Var ControlWidth As Integer = Self.ActualControlWidth
-		  Var ThumbWidth As Integer = Min(ControlWidth, Self.Height) - (Self.ThumbPadding * 2)
+		  Var ThumbWidth As Integer = Self.Height - (Self.ThumbPadding * 2)
 		  Var ThumbHeight As Integer = ThumbWidth
 		  Var ThumbMinX As Integer = Self.ThumbPadding
-		  Var ThumbMaxX As Integer = ControlWidth - (Self.ThumbPadding + ThumbWidth)
+		  Var ThumbMaxX As Integer = Self.ActualControlWidth - (Self.ThumbPadding + ThumbWidth)
 		  Var ThumbRange As Integer = ThumbMaxX - ThumbMinX
 		  
 		  Return New Rect(ThumbMinX + Round(ThumbRange * Self.Position), Self.ThumbPadding, ThumbWidth, ThumbHeight)
@@ -284,10 +308,9 @@ Inherits ArtisanKit.Control
 		Private Sub ThumbRect(Assigns NewRect As Rect)
 		  // We're really only going to take the left position
 		  
-		  Var ControlWidth As Integer = Self.ActualControlWidth
-		  Var ThumbWidth As Integer = Min(ControlWidth, Self.Height) - (Self.ThumbPadding * 2)
+		  Var ThumbWidth As Integer = Self.Height - (Self.ThumbPadding * 2)
 		  Var ThumbMinX As Integer = Self.ThumbPadding
-		  Var ThumbMaxX As Integer = ControlWidth - ((Self.ThumbPadding * 2) + ThumbWidth)
+		  Var ThumbMaxX As Integer = Self.ActualControlWidth - ((Self.ThumbPadding * 2) + ThumbWidth)
 		  Var ThumbRange As Integer = ThumbMaxX - ThumbMinX
 		  
 		  Self.Position = Max(Min((NewRect.Left - ThumbMinX) / ThumbRange, 1.0), 0.0)
@@ -316,26 +339,6 @@ Inherits ArtisanKit.Control
 		Event Paint(G As Graphics)
 	#tag EndHook
 
-
-	#tag ComputedProperty, Flags = &h21
-		#tag Getter
-			Get
-			  If Self.ControlWidth = Self.ControlWidthAuto Then
-			    Var Metrics As New Picture(2, 2, 32)
-			    Self.SetupFont(Metrics.Graphics)
-			    #if XojoVersion >= 2020.02
-			      Var RequiredWidth As Integer = Max(Ceiling(Metrics.Graphics.TextWidth(Self.LeftSideCaption)), Ceiling(Metrics.Graphics.TextWidth(Self.RightSideCaption)))
-			    #else
-			      Var RequiredWidth As Integer = Max(Ceil(Metrics.Graphics.TextWidth(Self.LeftSideCaption)), Ceil(Metrics.Graphics.TextWidth(Self.RightSideCaption)))
-			    #endif
-			    Return Min(Max(Min(RequiredWidth + (Self.Height * 1.5), Self.Width), Self.Height * 2), Self.Width)
-			  Else
-			    Return Min(Max(Self.ControlWidth, Self.Height * 2), Self.Width)
-			  End If
-			End Get
-		#tag EndGetter
-		Private ActualControlWidth As Integer
-	#tag EndComputedProperty
 
 	#tag ComputedProperty, Flags = &h0
 		#tag Getter
